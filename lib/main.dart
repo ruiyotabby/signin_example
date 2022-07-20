@@ -151,10 +151,10 @@ class _SignUpFormState extends State<SignUpForm> {
             ),
             onPressed: (() {
               if (_formKey.currentState!.validate()) {
-                _formProgress == 1 ? _showWelcomeScreen : null;
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text('Submitting Data')),
                 );
+                _formProgress == 1 ? _showWelcomeScreen : null;
               }
             }),
             child: const Text('Sign Up'),
