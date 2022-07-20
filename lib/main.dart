@@ -137,7 +137,14 @@ class _SignUpFormState extends State<SignUpForm> {
                     : Colors.blue;
               }),
             ),
-            onPressed: _formProgress == 1 ? _showWelcomeScreen : null,
+            onPressed: (() {
+              if (_formKey.currentState!.validate()) {
+                _formProgress == 1 ? _showWelcomeScreen : null;
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Processing Data')),
+                );
+              }
+            }),
             child: const Text('Sign Up'),
           ),
         ],
