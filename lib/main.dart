@@ -154,7 +154,7 @@ class _SignUpFormState extends State<SignUpForm> {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text('Submitting Data')),
                 );
-                _formProgress == 1 ? _showWelcomeScreen : null;
+                _showWelcomeScreen();
               }
             },
             child: const Text('Sign Up'),
@@ -186,7 +186,7 @@ class _AnimatedProgressIndicatorState extends State<AnimatedProgressIndicator>
   void initState() {
     super.initState();
     _controller = AnimationController(
-        duration: Duration(milliseconds: 1200), vsync: this);
+        duration: const Duration(milliseconds: 1200), vsync: this);
 
     final colorTween = TweenSequence([
       TweenSequenceItem(
