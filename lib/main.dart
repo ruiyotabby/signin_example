@@ -113,7 +113,7 @@ class _SignUpFormState extends State<SignUpForm> {
             child: TextFormField(
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'Please enter some text.';
+                  return 'Please enter your last name.';
                 }
                 return null;
               },
@@ -126,7 +126,7 @@ class _SignUpFormState extends State<SignUpForm> {
             child: TextFormField(
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'Please enter some your username.';
+                  return 'Please enter your username.';
                 }
                 return null;
               },
