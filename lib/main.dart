@@ -153,7 +153,7 @@ class _SignUpFormState extends State<SignUpForm> {
               if (_formKey.currentState!.validate()) {
                 _formProgress == 1 ? _showWelcomeScreen : null;
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Processing Data')),
+                  const SnackBar(content: Text('Submitting Data')),
                 );
               }
             }),
