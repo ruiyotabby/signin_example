@@ -100,7 +100,7 @@ class _SignUpFormState extends State<SignUpForm> {
             child: TextFormField(
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'Please enter some text.';
+                  return 'Please enter your first name.';
                 }
                 return null;
               },
