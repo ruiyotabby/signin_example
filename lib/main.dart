@@ -124,6 +124,12 @@ class _SignUpFormState extends State<SignUpForm> {
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextFormField(
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter some text.';
+                }
+                return null;
+              },
               controller: _usernameTextController,
               decoration: const InputDecoration(hintText: 'Username'),
             ),
